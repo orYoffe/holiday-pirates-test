@@ -7,7 +7,7 @@
 }
 .review::after {
   content: "";
-  width: 100%;
+  width: calc(100% - 50px);
   border-bottom: 1px solid rgba(0, 0, 0, .1);
   height: 1px;
   display: block;

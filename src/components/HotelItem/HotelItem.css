@@ -55,11 +55,16 @@
   right: 0;
 }
 
+.hotel-description {
+  max-height: calc(80% - 40px);
+  overflow-y: hidden;
+}
+
 .hotel-price {
   position: absolute;
   right: 20px;
-  bottom: 50px;
-  font-size: 34px;
+  bottom: 42px;
+  font-size: 30px;
 }
 
 .hotel-dates {
@@ -67,6 +72,7 @@
   right: 20px;
   bottom: 25px;
   opacity: .6;
+  font-size: 13px;
 }
 
 .hotel-reviews {

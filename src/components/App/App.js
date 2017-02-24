@@ -11,7 +11,7 @@ class App extends Component {
   }
 
   getHotels = () => {
-    api.get('http://fake-hotel-api.herokuapp.com/api/hotels', this.onHotelsReceived)
+    api.get('http://fake-hotel-api.herokuapp.com/api/hotels?count=5', this.onHotelsReceived)
   }
 
   onHotelsReceived = (hotels) => {

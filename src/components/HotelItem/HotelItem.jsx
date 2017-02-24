@@ -32,7 +32,7 @@ class HotelItem extends Component {
   }
 
   onReviewsReceived = (reviews) => {
-    if (reviews === 'error' || reviews.error) {
+    if (reviews === 'error' || reviews.error || reviews.length < 1) {
       this.setState({ errorMessage: 'An error occured', showReviews: true })
     } else {
       this.setState({ reviews, errorMessage: null, showReviews: true })
@@ -84,7 +84,7 @@ class HotelItem extends Component {
               <div className="hotel-location">{`${city} - ${country}`}</div>
               {starsContainer}
             </div>
-            <div>{description}</div>
+            <div className="hotel-description">{description}</div>
             <Button className="show-reviews-button" label={reviewButtonLabel} onClick={this.toggleReviews} />
             <div className="hotel-price">{price} &#8364;</div>
             <div className="hotel-dates">{dates}</div>
